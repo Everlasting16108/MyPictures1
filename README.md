@@ -1,1 +1,0 @@
-# MyPictures1
