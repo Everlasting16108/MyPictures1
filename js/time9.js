@@ -17,7 +17,7 @@
    	 div.style.height="30px";
    	 div.style.fontWeight="bold";
    	 div.style.textAlign="center";
-	document.getElementsByTagName("body").item(0).appendChild(div);    
+	document.getElementsByTagName("body").appendChild(div);    
    	 var now = new Date();
     	function createtime(){
         var grt= new Date("10/01/2021 00:00:00");
