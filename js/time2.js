@@ -1,6 +1,3 @@
-<div style=" height:30px;line-height: 30px;font-size: 14pt;font-weight: bold;text-align:center;color: pink;">
-<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> </div>
-<script language="javascript"> 
     var now = new Date();
     function createtime(){
         var grt= new Date("10/01/2021 00:00:00");
@@ -20,4 +17,3 @@
         document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
     }
     setInterval("createtime()",250); 
-</script> 
