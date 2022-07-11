@@ -1,8 +1,12 @@
 	var div = document.createElement("div");
 	var span1 = document.createElement("span");
     	var span2 = document.createElement("span");
-	span1.className="timeDate";
-    	span2.className="times";
+	var s1attr = document.createAttribute("class");
+	var s2attr = document.createAttribute("class");
+	s1attr.value = "timeDate";
+	s2attr.value = "times";
+	span1.setAttributeNode(s1attr);
+	span2.setAttributeNode(s1attr);
 	div.appendChild(span1);
 	div.appendChild(span2);
 	var style = document.createAttribute("style");
