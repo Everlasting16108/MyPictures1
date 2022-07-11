@@ -6,7 +6,7 @@
 	s1attr.value = "timeDate";
 	s2attr.value = "times";
 	span1.setAttributeNode(s1attr);
-	span2.setAttributeNode(s1attr);
+	span2.setAttributeNode(s2attr);
 	div.appendChild(span1);
 	div.appendChild(span2);
 	var style = document.createAttribute("style");
