@@ -1,7 +1,7 @@
     window.addEventListener('load', function() {
         var now = new Date();
         setInterval(function(){
-            var grt= new Date("10/01/2021 00:00:00");
+            var grt= new Date("10/01/2020 00:00:00");
             now.setTime(now.getTime()+250);
             days = (now - grt ) / 1000 / 60 / 60 / 24;
             dnum = Math.floor(days);
