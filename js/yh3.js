@@ -7,13 +7,13 @@ function clickEffect() {
   let origin;
   let normal;
   let ctx;
-  document.body.appendChild(canvas);
-  canvas.setAttribute("style", "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");
+  document.body.appendChild(Canvas);
+  Canvas.setAttribute("style", "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");
   const pointer = document.createElement("span");
   pointer.classList.add("pointer");
   document.body.appendChild(pointer);
-  if (canvas.getContext && window.addEventListener) {
-    ctx = canvas.getContext("2d");
+  if (Canvas.getContext && window.addEventListener) {
+    ctx = Canvas.getContext("2d");
     updateSize();
     window.addEventListener('resize', updateSize, false);
     loop();
@@ -41,16 +41,16 @@ function clickEffect() {
       pointer.style.left = x + "px";
     }, false);
   } else {
-    console.log("canvas or addEventListener is unsupported!");
+    console.log("Canvas or addEventListener is unsupported!");
   }
   function updateSize() {
-    canvas.width = window.innerWidth * 2;
-    canvas.height = window.innerHeight * 2;
-    canvas.style.width = window.innerWidth + 'px';
-    canvas.style.height = window.innerHeight + 'px';
+    Canvas.width = window.innerWidth * 2;
+    Canvas.height = window.innerHeight * 2;
+    Canvas.style.width = window.innerWidth + 'px';
+    Canvas.style.height = window.innerHeight + 'px';
     ctx.scale(2, 2);
-    width = (canvas.width = window.innerWidth);
-    height = (canvas.height = window.innerHeight);
+    width = (Canvas.width = window.innerWidth);
+    height = (Canvas.height = window.innerHeight);
     origin = {
       x: width / 2,
       y: height / 2
@@ -96,7 +96,7 @@ function clickEffect() {
  
   function loop() {
     ctx.fillStyle = "rgba(255, 255, 255, 0)";
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, Canvas.width, Canvas.height);
     for (let i = 0; i < balls.length; i++) {
       let b = balls[i];
       if (b.r < 0) continue;
